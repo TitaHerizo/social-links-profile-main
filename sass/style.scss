@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap');
+
+$Green: hsl(75, 94%, 57%);
+$White: hsl(0, 0%, 100%);
+$Grey: hsl(0, 0%, 20%);
+$DarkGrey: hsl(0, 0%, 12%);
+$OffBlack: hsl(0, 0%, 8%);
+
+html{
+    body{
+        background-color: $OffBlack;
+        color: $White;
+
+        font-family: Inter;
+
+        .container {
+            display: flex;
+            flex-direction: column;
+
+            max-width: 425px;
+            
+            padding: 1.1em 0;
+            margin: 2em auto;
+
+            align-items: center;
+
+            background-color: $DarkGrey;
+
+            border-radius: .5em;
+
+            gap: 1.5em;
+
+            img {
+                width: 30%;
+                border-radius: 50%;
+            }
+
+            .user{
+                text-align: center;
+                h1 {
+                    font-size: 1.5rem;
+                    margin: 0;
+                }
+    
+                .location {
+                    color: $Green;
+                    font-size: 0.9rem;
+                }
+            }
+
+            .description {
+                font-size: 0.8em;
+            }
+
+            .link_container {
+                display: grid;
+
+                grid-gap: 1em;
+
+                margin-top: 0.1em;
+
+                width: 100%;
+
+                .link {
+                    background-color: $Grey;
+                    width: 80%;
+
+                    padding: 0.5em 0;
+
+                    margin: 0 auto;
+
+                    text-align: center;
+
+                    border-radius: 0.5rem;
+
+                    font-weight: 600;
+                    &:hover{
+                        background-color: $Green;
+                        color: $OffBlack;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width:1024px) {
+        .container{
+            max-width: 20%;
+        }
+    }
+}
